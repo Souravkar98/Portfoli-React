@@ -9,14 +9,17 @@ const Portfolio = () => {
     {
       id: 1,
       src: blog,
+      hrf:"https://github.com/Souravkar98/blogger-app",
     },
     {
       id: 2,
       src: newapi,
+      hrf: "https://github.com/Souravkar98/Newsapi",
     },
     {
       id: 3,
       src: portfolio,
+      hrf: "https://github.com/Souravkar98/Portfoli-React",
     },
   ]
   return (
@@ -32,12 +35,11 @@ const Portfolio = () => {
 
 
             {
-              portfolios.map(({ id, src }) => (       
+              portfolios.map(({ id, src,hrf }) => (       
                    <div key={id} className=' shadow-md shadow-gray-600 rounded-lg '>
               <img src={src} alt="" className=' rounded-md duration-200 hover:scale-105' />
                 <div className='flex items-center justify-center'>
-                  <button className=' w-1/2 px-6 m-4 duration-200 hover:scale-105'>Demo</button>
-                  <button className=' w-1/2 px-6 m-4 duration-200 hover:scale-105'>Code</button>
+                  <button  className=' w-1/2 px-6 m-4 duration-200 hover:scale-105'><a href={hrf} target='_blank' rel='noreferrer'>Code</a> </button>
                 </div>
               </div>))
             }
